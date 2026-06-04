@@ -1,0 +1,171 @@
+:root {
+    /* Светлая тема (по умолчанию) */
+    --bg-gradient: linear-gradient(135deg, #e0eafc, #cfdef3);
+    --text-main: #2c3e50;
+    --text-muted: #4a5568;
+    --text-accent: #1e3c72;
+    --accent-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+    --accent-hover: linear-gradient(135deg, #2a5298, #1e3c72);
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --card-bg: #ffffff;
+    --card-shadow: rgba(31, 38, 135, 0.07);
+    --item-text: #2a5298;
+}
+
+body.dark-theme {
+    /* Темная тема */
+    --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-accent: #38bdf8;
+    --accent-gradient: linear-gradient(135deg, #38bdf8, #0284c7);
+    --accent-hover: linear-gradient(135deg, #0284c7, #38bdf8);
+    --glass-bg: rgba(15, 23, 42, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --card-bg: #1e293b;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --item-text: #38bdf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    padding: 15px 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px 0 var(--card-shadow);
+    position: relative;
+}
+
+/* Кнопка переключения */
+.theme-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px var(--card-shadow);
+    margin-left: auto; /* Отодвигает кнопку вправо */
+}
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+
+.header__item a {
+    color: var(--text-accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.header__item a:hover, .header__item a.active-nav {
+    background: var(--accent-gradient);
+    color: #ffffff;
+}
+
+h1 {
+    color: var(--text-accent);
+    font-size: 2rem;
+    margin: 30px 0 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    max-width: 800px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+}
+
+ul li {
+    background: var(--card-bg);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: var(--item-text);
+    box-shadow: 0 4px 6px var(--card-shadow);
+    border-left: 5px solid var(--text-accent);
+}
+
+ul li:hover {
+    transform: translateY(-3px);
+}
+
+.campus-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.campus-links a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--accent-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px var(--card-shadow);
+}
+
+.campus-links a:hover {
+    transform: translateY(-2px);
+    background: var(--accent-hover);
+}
+
+.campus-links a.active {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+}

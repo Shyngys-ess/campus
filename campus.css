@@ -1,0 +1,29 @@
+.campus-detail-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.campus-info-block h3, 
+.campus-features h3 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.campus-features ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.campus-features ul li {
+    max-width: 100%;
+}

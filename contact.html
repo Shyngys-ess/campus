@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | ВТК</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">  
+        <div class="header__item">
+            <a href="index.html">Главная</a>
+        </div>
+        <div class="header__item">
+            <a href="about.html">О колледже</a>
+        </div>
+        <div class="header__item">
+            <a href="contact.html" class="active-nav">Контакты</a>
+        </div>
+    </div>
+
+    <h1>Контакты нашего колледжа ВТК</h1>
+    <p>Свяжитесь с нами любым удобным способом или посетите один из наших корпусов. Мы всегда рады ответить на ваши вопросы!</p>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-card">
+                <h4>📍 Адрес</h4>
+                <p>Республика Казахстан, г. Кокшетау, Центральный район</p>
+            </div>
+            <div class="info-card">
+                <h4>📞 Телефоны</h4>
+                <p>Приемная комиссия: +7 (7162) XX-XX-XX</p>
+                <p>Канцелярия: +7 (7162) YY-YY-YY</p>
+            </div>
+            <div class="info-card">
+                <h4>✉️ Электронная почта</h4>
+                <p>info@vtk-college.kz</p>
+                <p>priem@vtk-college.kz</p>
+            </div>
+        </div>
+
+        <form class="contact-form" id="feedbackForm">
+            <h3>Напишите нам</h3>
+            <div class="form-group">
+                <input type="text" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Ваш Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+
+    <div class="map-section">
+        <h2>Мы на карте</h2>
+        <div class="map-wrapper">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72373.1973686854!2d69.34444549999999!3d53.2844445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424346bc0f5043d1%3A0x6e9a6cf7fe86d4b9!2z0JrQvtC60YjQtdGC0LDRDSwg0JrQsNC30LDRhdGB0YLQsNC9!5e0!3m2!1sru!2skz!4v1717500000000!5m2!1sru!2skz" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
